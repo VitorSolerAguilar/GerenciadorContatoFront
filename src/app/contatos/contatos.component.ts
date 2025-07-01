@@ -13,9 +13,7 @@ export class ContatosComponent implements OnInit {
   contatos: Contato[] = [];
   formGroupContato: FormGroup;
 
-  constructor(private service: ContatoService,
-    private formBuilder: FormBuilder
-  ) {
+  constructor(private service: ContatoService,private formBuilder: FormBuilder) {
     this.formGroupContato = formBuilder.group({
       id: [null],
       nomeCompleto: [''],

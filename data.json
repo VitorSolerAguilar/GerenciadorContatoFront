@@ -27,6 +27,20 @@
       "empresa": "a",
       "notasAdicionais": "",
       "Contatofavorito": false
+    },
+    {
+      "id": 3,
+      "nomeCompleto": "Juninho portugal",
+      "telefone": "(11) 65985-6211",
+      "email": "juninho@gmail.com",
+      "endereco": "Rua das flores, 256, Jardim Almeida",
+      "dataNascimento": "1900-12-01",
+      "categoria": "Trabalho",
+      "apelido": "Junin federal",
+      "cidade": "Itaquaquecetuba",
+      "empresa": "Calipson",
+      "notasAdicionais": "Gosta de fotebol",
+      "Contatofavorito": true
     }
   ]
 }
