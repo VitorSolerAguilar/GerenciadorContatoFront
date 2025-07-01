@@ -1,0 +1,14 @@
+export interface Contato{
+    id: number, 
+    nomeCompleto: string,
+    telefone: string,
+    email: string,
+    endereco: string,
+    dataNascimento: Date,
+    categoria: string,
+    apelido: string,
+    cidade: string,
+    empresa: string,
+    notasAdicionais: string,
+    Contatofavorito: boolean,
+}
