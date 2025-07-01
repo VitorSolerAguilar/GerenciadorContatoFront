@@ -1,20 +1,6 @@
 {
   "contatos": [
     {
-      "id": 1,
-      "nomeCompleto": "João da Silva",
-      "telefone": "(11) 98765-4321",
-      "email": "joao@gmail.com",
-      "endereco": "Rua bolsonaro, 568, ceilandia pequena",
-      "dataNascimento": "01/10/2020",
-      "categoria": "Trabalho",
-      "apelido": "Joã",
-      "cidade": "Brasilia",
-      "empresa": "Gov",
-      "notasAdicionais": "Tem alergia a abelha",
-      "Contatofavorito": true
-    },
-    {
       "id": 2,
       "nomeCompleto": "teste",
       "telefone": "1132",
@@ -34,12 +20,12 @@
       "telefone": "(11) 65985-6211",
       "email": "juninho@gmail.com",
       "endereco": "Rua das flores, 256, Jardim Almeida",
-      "dataNascimento": "1900-12-01",
+      "dataNascimento": "2004-12-01",
       "categoria": "Trabalho",
       "apelido": "Junin federal",
       "cidade": "Itaquaquecetuba",
       "empresa": "Calipson",
-      "notasAdicionais": "Gosta de fotebol",
+      "notasAdicionais": "",
       "Contatofavorito": true
     }
   ]

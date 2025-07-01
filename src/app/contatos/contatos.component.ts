@@ -41,7 +41,7 @@ export class ContatosComponent implements OnInit {
     });
   }
 
-  save() {
+  salvarContato() {
     this.service.save(this.formGroupContato.value).subscribe(
       {
         next: json => {

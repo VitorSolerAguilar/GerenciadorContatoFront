@@ -11,7 +11,7 @@ import { ContatoService } from '../contato.service';
 export class FavoritosComponent implements OnInit {
   contatosFavoritos: Contato[] = [];
 
-  constructor(private contatoService: ContatoService) {}
+  constructor(private contatoService: ContatoService) { }
 
   ngOnInit(): void {
     this.carregarFavoritos();
@@ -27,4 +27,13 @@ export class FavoritosComponent implements OnInit {
       }
     });
   }
+
+  deletarFavorito(contato: Contato) : void {
+    this.contatoService.delete(contato).subscribe(
+      {
+        next: () => this.carregarFavoritos()
+      }
+    )
+  }
+
 }
