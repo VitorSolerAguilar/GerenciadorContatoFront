@@ -11,7 +11,7 @@ export class ContatoService {
   apiUrl = "http://localhost:3000/contatos";
 
   constructor(private http: HttpClient) { }
-  
+
   getAll(): Observable<Contato[]> {
     return this.http.get<Contato[]>(this.apiUrl);
   }

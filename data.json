@@ -2,17 +2,17 @@
   "contatos": [
     {
       "id": 2,
-      "nomeCompleto": "teste",
-      "telefone": "1132",
+      "nomeCompleto": "Marcio Dantas",
+      "telefone": "(11) 65985-6211",
       "email": "pebal43931@chysir.com",
-      "endereco": "ad",
+      "endereco": "Rua das flores, 256, Jardim Almeida",
       "dataNascimento": "2004-12-01",
       "categoria": "Família",
-      "apelido": "a",
-      "cidade": "a",
-      "empresa": "a",
+      "apelido": "Dantinhas",
+      "cidade": "Itupeva",
+      "empresa": "Pepsico",
       "notasAdicionais": "",
-      "Contatofavorito": false
+      "Contatofavorito": true
     },
     {
       "id": 3,
