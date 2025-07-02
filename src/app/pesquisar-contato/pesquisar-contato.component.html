@@ -1,0 +1,89 @@
+<div class="container mt-4">
+  <h2>Pesquisar Contatos</h2>
+
+  <form [formGroup]="filtroForm" class="row g-3 mb-4">
+
+    <div class="col-md-4">
+      <label class="form-label">Nome Completo</label>
+      <input type="text" class="form-control" formControlName="nomeCompleto" placeholder="Digite o nome">
+    </div>
+
+    <div class="col-md-4">
+      <label class="form-label">Telefone</label>
+      <input type="text" class="form-control" formControlName="telefone" placeholder="Digite o telefone">
+    </div>
+
+    <div class="col-md-4">
+      <label for="email" class="form-label">E-mail</label>
+      <input formControlName="email" type="email" class="form-control" id="email" placeholder="exemplo@email.com">
+    </div>
+
+    <div class="col-md-4">
+      <label for="endereco" class="form-label">Endereço</label>
+      <input formControlName="endereco" type="text" class="form-control" id="endereco"
+        placeholder="Rua, número, bairro">
+    </div>
+
+    <div class="col-md-4">
+      <label for="dataNascimento" class="form-label">Data de Nascimento</label>
+      <input formControlName="dataNascimento" type="date" class="form-control" id="dataNascimento">
+    </div>
+
+    <div class="col-md-4">
+      <label for="apelido" class="form-label">Apelido</label>
+      <input formControlName="apelido" type="text" class="form-control" id="apelido" placeholder="Apelido">
+    </div>
+
+    <div class="col-md-4">
+      <label for="cidade" class="form-label">Cidade</label>
+      <input formControlName="cidade" type="text" class="form-control" id="cidade" placeholder="Cidade">
+    </div>
+
+    <div class="col-md-4">
+      <label for="empresa" class="form-label">Empresa</label>
+      <input formControlName="empresa" type="text" class="form-control" id="empresa" placeholder="Empresa">
+    </div>
+
+
+    <div class="col-md-4">
+      <label class="form-label">Categoria</label>
+      <select class="form-select" formControlName="categoria">
+        <option value="">Todas</option>
+        <option value="Família">Família</option>
+        <option value="Trabalho">Trabalho</option>
+        <option value="Escola">Escola</option>
+        <option value="Amigos">Amigos</option>
+        <option value="Outros">Outros</option>
+      </select>
+    </div>
+
+    <div class="col-12 d-flex justify-content-start">
+      <button type="button" class="btn btn-primary me-2" (click)="pesquisar()">Pesquisar</button>
+      <button type="button" class="btn btn-secondary" (click)="limpar()">Limpar</button>
+    </div>
+
+  </form>
+
+  <div *ngIf="contatosFiltrados.length === 0" class="alert alert-info p-3 mb-2 bg-danger text-white"
+    style="text-align: center;">
+    Nenhum contato encontrado
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-2 g-4" *ngIf="contatosFiltrados.length > 0">
+    <div class="col" *ngFor="let c of contatosFiltrados">
+      <div class="card h-100 border-primary">
+        <div class="card-body">
+          <h5 class="card-title">{{ c.nomeCompleto }} ({{ c.apelido }}) <span *ngIf="c.Contatofavorito" class="text-warning" title="Favorito">★</span></h5>
+          <p class="card-text mb-1"><strong>Telefone:</strong> {{ c.telefone }}</p>
+          <p class="card-text mb-1"><strong>E-mail:</strong> {{ c.email }}</p>
+          <p class="card-text mb-1"><strong>Endereço:</strong> {{ c.endereco }}</p>
+          <p class="card-text mb-1"><strong>Data de Nascimento:</strong> {{ c.dataNascimento }}</p>
+          <p class="card-text mb-1"><strong>Apelido:</strong> {{ c.apelido }}</p>
+          <p class="card-text mb-1"><strong>Cidade:</strong> {{ c.cidade }}</p>
+          <p class="card-text mb-1"><strong>Empresa:</strong> {{ c.empresa }}</p>
+          <p class="card-text mb-1"><strong>Categoria:</strong> {{ c.categoria }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

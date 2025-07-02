@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { FavoritosComponent } from './favoritos/favoritos.component';
+import { PesquisarContatoComponent } from './pesquisar-contato/pesquisar-contato.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FavoritosComponent } from './favoritos/favoritos.component';
     NavbarComponent,
     ContatosComponent,
     HomeComponent,
-    FavoritosComponent
+    FavoritosComponent,
+    PesquisarContatoComponent
   ],
   imports: [
     BrowserModule,

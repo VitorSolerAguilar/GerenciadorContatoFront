@@ -27,6 +27,20 @@
       "empresa": "Calipson",
       "notasAdicionais": "",
       "Contatofavorito": true
+    },
+    {
+      "id": 4,
+      "nomeCompleto": "Vitor Soler Aguilar",
+      "telefone": "(11) 95085-6588",
+      "email": "vitor.aguilar01@fatec.sp.gov.br",
+      "endereco": "Rua São Bento, 255, Jardim Cinza",
+      "dataNascimento": "2004-12-01",
+      "categoria": "Escola",
+      "apelido": "Vitão",
+      "cidade": "Itu",
+      "empresa": "",
+      "notasAdicionais": "",
+      "Contatofavorito": false
     }
   ]
 }
