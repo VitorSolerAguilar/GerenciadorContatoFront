@@ -15,8 +15,8 @@ export class PesquisarContatoComponent implements OnInit {
   contatosFiltrados: Contato[] = [];
   filtroForm: FormGroup;
 
-  constructor(private contatoService: ContatoService, private fb: FormBuilder) {
-    this.filtroForm = this.fb.group({
+  constructor(private contatoService: ContatoService, formBuilder: FormBuilder) {
+    this.filtroForm = formBuilder.group({
       nomeCompleto: [''],
       telefone: [''],
       email: [''],
@@ -46,7 +46,7 @@ export class PesquisarContatoComponent implements OnInit {
   }
 
   pesquisar() {
-    const { nomeCompleto, telefone, email, endereco, dataNascimento, apelido, cidade, empresa, categoria} = this.filtroForm.value;
+    const { nomeCompleto, telefone, email, endereco, dataNascimento, apelido, cidade, empresa, categoria } = this.filtroForm.value;
 
     this.contatosFiltrados = this.todosContatos.filter(c =>
       (!nomeCompleto || c.nomeCompleto?.toLowerCase().includes(nomeCompleto.toLowerCase())) &&

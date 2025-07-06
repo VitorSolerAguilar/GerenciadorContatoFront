@@ -15,6 +15,10 @@ export class ContatoService {
   getAll(): Observable<Contato[]> {
     return this.http.get<Contato[]>(this.apiUrl);
   }
+  
+  getById(id: number): Observable<Contato> {
+    return this.http.get<Contato>(`${this.apiUrl}/${id}`);
+  }
 
   save(contato: Contato): Observable<Contato> {
     return this.http.post<Contato>(this.apiUrl, contato);

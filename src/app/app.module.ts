@@ -12,6 +12,8 @@ import { provideHttpClient } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { FavoritosComponent } from './favoritos/favoritos.component';
 import { PesquisarContatoComponent } from './pesquisar-contato/pesquisar-contato.component';
+import { DetalhesFavoritosComponent } from './detalhes-favoritos/detalhes-favoritos.component';
+import { EditarContatoComponent } from './editar-contato/editar-contato.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { PesquisarContatoComponent } from './pesquisar-contato/pesquisar-contato
     ContatosComponent,
     HomeComponent,
     FavoritosComponent,
-    PesquisarContatoComponent
+    PesquisarContatoComponent,
+    DetalhesFavoritosComponent,
+    EditarContatoComponent
   ],
   imports: [
     BrowserModule,

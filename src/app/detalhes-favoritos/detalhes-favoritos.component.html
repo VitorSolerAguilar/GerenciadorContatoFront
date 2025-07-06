@@ -1,0 +1,25 @@
+<div class="container mt-4">
+  <h2>Detalhes do Contato</h2>
+
+  <div *ngIf="contato" class="card shadow-sm border-primary">
+    <div class="card-body">
+      <h4 class="card-title">{{ contato.nomeCompleto }} <span *ngIf="contato.Contatofavorito" class="text-warning">★</span></h4>
+      <p class="card-text"><strong>Apelido:</strong> {{ contato.apelido }}</p>
+      <p class="card-text"><strong>Telefone:</strong> {{ contato.telefone }}</p>
+      <p class="card-text"><strong>E-mail:</strong> {{ contato.email }}</p>
+      <p class="card-text"><strong>Endereço:</strong> {{ contato.endereco }}</p>
+      <p class="card-text"><strong>Data de Nascimento:</strong> {{ contato.dataNascimento | date:'dd/MM/yyyy' }}</p>
+      <p class="card-text"><strong>Categoria:</strong> {{ contato.categoria }}</p>
+      <p class="card-text"><strong>Cidade:</strong> {{ contato.cidade }}</p>
+      <p class="card-text"><strong>Empresa:</strong> {{ contato.empresa || '-' }}</p>
+      <p class="card-text"><strong>Notas Adicionais:</strong> {{ contato.notasAdicionais || '-' }}</p>
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-secondary" (click)="voltar()">Voltar</button>
+    </div>
+  </div>
+
+  <div *ngIf="!contato" class="alert alert-danger mt-3">
+    Contato não encontrado.
+  </div>
+</div>

@@ -10,7 +10,7 @@ import { ContatoService } from '../contato.service';
   styleUrl: './contatos.component.css'
 })
 export class ContatosComponent implements OnInit {
-  contatos: Contato[] = [];
+  contatos: Contato[] = []; 
   formGroupContato: FormGroup;
 
   constructor(private service: ContatoService,private formBuilder: FormBuilder) {
