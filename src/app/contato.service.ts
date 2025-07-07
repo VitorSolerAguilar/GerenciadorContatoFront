@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Contato } from './contato';
 
 @Injectable({
@@ -30,5 +30,10 @@ export class ContatoService {
 
   update(contato: Contato): Observable<Contato> {
     return this.http.put<Contato>(`${this.apiUrl}/${contato.id}`, contato);
+  }
+
+  getFavoritos(): Observable<Contato[]> {
+    return this.getAll().pipe(map(contatos => contatos.filter(c => c.Contatofavorito))
+    );
   }
 }
