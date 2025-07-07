@@ -8,6 +8,7 @@ import { EditarContatoComponent } from './editar-contato/editar-contato.componen
 import { CadastrarContatoComponent } from './cadastrar-contato/cadastrar-contato.component';
 import { ExibirContatosComponent } from './exibir-contatos/exibir-contatos.component';
 import { DetalhesContatoComumComponent } from './detalhes-contato-comum/detalhes-contato-comum.component';
+import { SobreComponent } from './sobre/sobre.component';
 
 const routes: Routes = [
   { path: 'cadastrarContato', component: CadastrarContatoComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'editarContato/:id', component: EditarContatoComponent },
   { path: 'exibirContatos', component: ExibirContatosComponent },
   { path: 'detalhesContatoComum/:id', component: DetalhesContatoComumComponent },
+  { path: 'sobre', component: SobreComponent },
   { path: '', component: HomeComponent }
 ];
 

@@ -27,7 +27,7 @@ export class CadastrarContatoComponent implements OnInit {
       empresa: [''],
       site: [''],
       notasAdicionais: [''],
-      Contatofavorito: [false, Validators.required]
+      Contatofavorito: [false]
     });
 
   }
@@ -43,6 +43,11 @@ export class CadastrarContatoComponent implements OnInit {
   }
 
   salvarContato() {
+  if (this.formGroupContato.invalid) {
+    this.formGroupContato.markAllAsTouched();
+    return;
+  }
+
     this.service.save(this.formGroupContato.value).subscribe(
       {
         next: json => {

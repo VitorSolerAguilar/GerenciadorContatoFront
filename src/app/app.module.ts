@@ -16,6 +16,7 @@ import { EditarContatoComponent } from './editar-contato/editar-contato.componen
 import { CadastrarContatoComponent } from './cadastrar-contato/cadastrar-contato.component';
 import { ExibirContatosComponent } from './exibir-contatos/exibir-contatos.component';
 import { DetalhesContatoComumComponent } from './detalhes-contato-comum/detalhes-contato-comum.component';
+import { SobreComponent } from './sobre/sobre.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DetalhesContatoComumComponent } from './detalhes-contato-comum/detalhes
     EditarContatoComponent,
     CadastrarContatoComponent,
     ExibirContatosComponent,
-    DetalhesContatoComumComponent
+    DetalhesContatoComumComponent,
+    SobreComponent
   ],
   imports: [
     BrowserModule,

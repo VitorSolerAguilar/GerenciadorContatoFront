@@ -2,15 +2,15 @@
     <h2>Cadastrar Contato</h2>
     <form [formGroup]="formGroupContato">
         <div class="mb-3">
-            <label for="nomeCompleto" class="form-label">Nome Completo</label>
-            <input formControlName="nomeCompleto" type="text" class="form-control" id="nomeCompleto"
-                placeholder="Digite o nome completo">
+            <label for="nomeCompleto" class="form-label">Nome Completo *</label>
+            <input formControlName="nomeCompleto" type="text" class="form-control" id="nomeCompleto" placeholder="Digite o nome completo">
+            <div class="text-danger" *ngIf="formGroupContato.get('nomeCompleto')?.touched && formGroupContato.get('nomeCompleto')?.invalid">O nome completo é obrigatório</div>
         </div>
 
         <div class="mb-3">
-            <label for="telefone" class="form-label">Telefone</label>
-            <input formControlName="telefone" type="tel" class="form-control" id="telefone"
-                placeholder="(XX) XXXXX-XXXX">
+            <label for="telefone" class="form-label">Telefone *</label>
+            <input formControlName="telefone" type="tel" class="form-control" id="telefone"placeholder="(XX) XXXXX-XXXX">
+            <div class="text-danger" *ngIf="formGroupContato.get('telefone')?.touched && formGroupContato.get('telefone')?.invalid">O telefone é obrigatório.</div>
         </div>
 
         <div class="mb-3">
@@ -30,7 +30,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="categoria" class="form-label">Categoria</label>
+            <label for="categoria" class="form-label">Categoria *</label>
             <select class="form-select" id="categoria" formControlName="categoria">
                 <option value="" selected disabled>Selecione</option>
                 <option value="Família">Família</option>
@@ -39,6 +39,7 @@
                 <option value="Amigos">Amigos</option>
                 <option value="Outros">Outros</option>
             </select>
+            <div class="text-danger" *ngIf="formGroupContato.get('categoria')?.touched && formGroupContato.get('categoria')?.invalid">A categoria é obrigatório.</div>
         </div>
 
         <div class="mb-3">
