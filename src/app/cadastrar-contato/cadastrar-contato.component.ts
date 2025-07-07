@@ -6,10 +6,10 @@ import { ContatoService } from '../contato.service';
 @Component({
   selector: 'app-contatos',
   standalone: false,
-  templateUrl: './contatos.component.html',
-  styleUrl: './contatos.component.css'
+  templateUrl: './cadastrar-contato.component.html',
+  styleUrl: './cadastrar-contato.component.css'
 })
-export class ContatosComponent implements OnInit {
+export class CadastrarContatoComponent implements OnInit {
   contatos: Contato[] = []; 
   formGroupContato: FormGroup;
 
