@@ -27,9 +27,8 @@ export class CadastrarContatoComponent implements OnInit {
       empresa: [''],
       site: [''],
       notasAdicionais: [''],
-      Contatofavorito: [false]
+      contatofavorito: [false]
     });
-
   }
 
   ngOnInit(): void {
