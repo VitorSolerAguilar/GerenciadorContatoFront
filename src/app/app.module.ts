@@ -14,6 +14,8 @@ import { PesquisarContatoComponent } from './pesquisar-contato/pesquisar-contato
 import { DetalhesFavoritosComponent } from './detalhes-favoritos/detalhes-favoritos.component';
 import { EditarContatoComponent } from './editar-contato/editar-contato.component';
 import { CadastrarContatoComponent } from './cadastrar-contato/cadastrar-contato.component';
+import { ExibirContatosComponent } from './exibir-contatos/exibir-contatos.component';
+import { DetalhesContatoComumComponent } from './detalhes-contato-comum/detalhes-contato-comum.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { CadastrarContatoComponent } from './cadastrar-contato/cadastrar-contato
     PesquisarContatoComponent,
     DetalhesFavoritosComponent,
     EditarContatoComponent,
-    CadastrarContatoComponent
+    CadastrarContatoComponent,
+    ExibirContatosComponent,
+    DetalhesContatoComumComponent
   ],
   imports: [
     BrowserModule,

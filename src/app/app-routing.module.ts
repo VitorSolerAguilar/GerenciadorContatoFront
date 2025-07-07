@@ -6,6 +6,8 @@ import { HomeComponent } from './home/home.component';
 import { DetalhesFavoritosComponent } from './detalhes-favoritos/detalhes-favoritos.component';
 import { EditarContatoComponent } from './editar-contato/editar-contato.component';
 import { CadastrarContatoComponent } from './cadastrar-contato/cadastrar-contato.component';
+import { ExibirContatosComponent } from './exibir-contatos/exibir-contatos.component';
+import { DetalhesContatoComumComponent } from './detalhes-contato-comum/detalhes-contato-comum.component';
 
 const routes: Routes = [
   { path: 'cadastrarContato', component: CadastrarContatoComponent },
@@ -13,6 +15,8 @@ const routes: Routes = [
   { path: 'pesquisarContato', component: PesquisarContatoComponent },
   { path: 'detalhesFavoritos/:id', component: DetalhesFavoritosComponent },
   { path: 'editarContato/:id', component: EditarContatoComponent },
+  { path: 'exibirContatos', component: ExibirContatosComponent },
+  { path: 'detalhesContatoComum/:id', component: DetalhesContatoComumComponent },
   { path: '', component: HomeComponent }
 ];
 

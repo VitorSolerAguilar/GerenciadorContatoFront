@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
-import { Contato } from '../contato';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ContatoService } from '../contato.service';
+import { Contato } from '../contato';
 
 @Component({
-  selector: 'app-detalhes-favoritos',
+  selector: 'app-detalhes-contato-comum',
   standalone: false,
-  templateUrl: './detalhes-favoritos.component.html',
-  styleUrl: './detalhes-favoritos.component.css'
+  templateUrl: './detalhes-contato-comum.component.html',
+  styleUrl: './detalhes-contato-comum.component.css'
 })
-export class DetalhesFavoritosComponent {
+export class DetalhesContatoComumComponent {
   contato!: Contato | null;
 
-  constructor(private route: ActivatedRoute, private contatoService: ContatoService, private router: Router) { }
+constructor(private route: ActivatedRoute, private contatoService: ContatoService, private router: Router) { }
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
@@ -23,6 +23,6 @@ export class DetalhesFavoritosComponent {
   }
 
   voltar() {
-    this.router.navigate(['/favoritos']);
+    this.router.navigate(['/exibirContatos']);
   }
 }

@@ -1,0 +1,28 @@
+<div class="container mt-4">
+
+    <h2 class="text-center mb-4">Contatos Cadastrados</h2>
+
+    <div class="row row-cols-1 row-cols-md-2 g-4" *ngIf="contatos && contatos.length > 0">
+        <div class="col" *ngFor="let c of contatos">
+            <div class="card h-100 border-primary shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{ c.nomeCompleto }} <span *ngIf="c.Contatofavorito" Class="text-warning">★</span></h5>
+                    <p class="card-text mb-1"><strong>Apelido:</strong> {{ c.apelido }}</p>
+                    <p class="card-text mb-1"><strong>Telefone:</strong> {{ c.telefone }}</p>
+                    <p class="card-text mb-1"><strong>Email:</strong> {{ c.email }}</p>
+                    <p class="card-text mb-1"><strong>Categoria:</strong> {{ c.categoria }}</p>
+                    <p class="card-text"><strong>Cidade:</strong> {{ c.cidade }}</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <button class="btn btn-sm btn-outline-primary" (click)="verDetalhes(c)">Ver Detalhes</button>
+                    <button class="btn btn-sm btn-outline-secondary" [routerLink]="['/editarContato', c.id]">Editar</button>
+                    <button class="btn btn-sm btn-outline-danger" (click)="deletarContato(c)">Excluir Contato</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="contatos && contatos.length === 0" class="alert alert-warning text-center">
+        Nenhum contato cadastrado ainda.
+    </div>
+</div>
