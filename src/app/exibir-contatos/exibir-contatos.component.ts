@@ -28,6 +28,7 @@ export class ExibirContatosComponent implements OnInit {
       apelido: [''],
       cidade: [''],
       empresa: [''],
+      site: [''],
       notasAdicionais: [''],
       Contatofavorito: [false]
     });

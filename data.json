@@ -55,6 +55,21 @@
       "empresa": "Solistica",
       "notasAdicionais": "",
       "Contatofavorito": false
+    },
+    {
+      "id": 6,
+      "nomeCompleto": "Julho Federal",
+      "telefone": "(11) 65987-5477",
+      "email": "julinho@gmail.com",
+      "endereco": "Rua dos Jua, 268, Bairro Novo",
+      "dataNascimento": "1980-02-25",
+      "categoria": "Escola",
+      "apelido": "Julhão",
+      "cidade": "Parnaiba",
+      "empresa": "",
+      "site": "https://youtube.com",
+      "notasAdicionais": "",
+      "Contatofavorito": false
     }
   ]
 }

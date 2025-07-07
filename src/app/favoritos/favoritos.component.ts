@@ -27,6 +27,7 @@ export class FavoritosComponent implements OnInit {
       apelido: [''],
       cidade: [''],
       empresa: [''],
+      site: [''],
       notasAdicionais: [''],
       Contatofavorito: [false]
     });

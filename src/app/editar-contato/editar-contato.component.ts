@@ -27,6 +27,7 @@ export class EditarContatoComponent {
       apelido: [''],
       cidade: [''],
       empresa: [''],
+      site: [''],
       notasAdicionais: [''],
       Contatofavorito: [false]
     });

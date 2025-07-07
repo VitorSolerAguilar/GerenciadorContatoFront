@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Contato } from '../contato';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContatoService } from '../contato.service';
 
 @Component({
@@ -16,17 +16,18 @@ export class CadastrarContatoComponent implements OnInit {
   constructor(private service: ContatoService,private formBuilder: FormBuilder) {
     this.formGroupContato = formBuilder.group({
       id: [null],
-      nomeCompleto: [''],
-      telefone: [''],
+      nomeCompleto: ['', Validators.required],
+      telefone: ['', Validators.required],
       email: [''],
       endereco: [''],
       dataNascimento: [''],
-      categoria: [''],
+      categoria: ['', Validators.required],
       apelido: [''],
       cidade: [''],
       empresa: [''],
+      site: [''],
       notasAdicionais: [''],
-      Contatofavorito: [false]
+      Contatofavorito: [false, Validators.required]
     });
 
   }
@@ -51,5 +52,4 @@ export class CadastrarContatoComponent implements OnInit {
       }
     )
   }
-
 }

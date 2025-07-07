@@ -44,6 +44,11 @@
       <input formControlName="empresa" type="text" class="form-control" id="empresa" placeholder="Empresa">
     </div>
 
+    <div class="col-md-4">
+      <label for="site" class="form-label">Site</label>
+      <input formControlName="site" type="text" class="form-control" id="site" placeholder="https://exemplo.com.br">
+    </div>
+
 
     <div class="col-md-4">
       <label class="form-label">Categoria</label>
@@ -76,12 +81,13 @@
           <h5 class="card-title">{{ c.nomeCompleto }} ({{ c.apelido }}) <span *ngIf="c.Contatofavorito"
               class="text-warning" title="Favorito">★</span></h5>
           <p class="card-text mb-1"><strong>Telefone:</strong> {{ c.telefone }}</p>
-          <p class="card-text mb-1"><strong>E-mail:</strong> {{ c.email }}</p>
-          <p class="card-text mb-1"><strong>Endereço:</strong> {{ c.endereco }}</p>
-          <p class="card-text mb-1"><strong>Data de Nascimento:</strong> {{ c.dataNascimento }}</p>
-          <p class="card-text mb-1"><strong>Apelido:</strong> {{ c.apelido }}</p>
-          <p class="card-text mb-1"><strong>Cidade:</strong> {{ c.cidade }}</p>
-          <p class="card-text mb-1"><strong>Empresa:</strong> {{ c.empresa }}</p>
+          <p class="card-text mb-1"><strong>E-mail:</strong> {{ c.email || '-' }} </p>
+          <p class="card-text mb-1"><strong>Endereço:</strong> {{ c.endereco || '-' }}</p>
+          <p class="card-text mb-1"><strong>Data de Nascimento:</strong> {{ c.dataNascimento || '-' }}</p>
+          <p class="card-text mb-1"><strong>Apelido:</strong> {{ c.apelido || '-' }}</p>
+          <p class="card-text mb-1"><strong>Cidade:</strong> {{ c.cidade || '-' }}</p>
+          <p class="card-text mb-1"><strong>Empresa:</strong> {{ c.empresa || '-' }}</p>
+          <p class="card-text mb-1"><strong>Site:</strong> {{ c.site || '-' }}</p>
           <p class="card-text mb-1"><strong>Categoria:</strong> {{ c.categoria }}</p>
         </div>
       </div>

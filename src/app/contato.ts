@@ -9,6 +9,7 @@ export interface Contato{
     apelido: string,
     cidade: string,
     empresa: string,
+    site: string,
     notasAdicionais: string,
     Contatofavorito: boolean,
 }

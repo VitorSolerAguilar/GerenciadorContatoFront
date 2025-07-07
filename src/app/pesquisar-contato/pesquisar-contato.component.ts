@@ -26,6 +26,7 @@ export class PesquisarContatoComponent implements OnInit {
       apelido: [''],
       cidade: [''],
       empresa: [''],
+      site: ['']
     });
   }
 
@@ -46,7 +47,7 @@ export class PesquisarContatoComponent implements OnInit {
   }
 
   pesquisar() {
-    const { nomeCompleto, telefone, email, endereco, dataNascimento, apelido, cidade, empresa, categoria } = this.filtroForm.value;
+    const { nomeCompleto, telefone, email, endereco, dataNascimento, apelido, cidade, empresa, categoria, site } = this.filtroForm.value;
 
     this.contatosFiltrados = this.todosContatos.filter(c =>
       (!nomeCompleto || c.nomeCompleto?.toLowerCase().includes(nomeCompleto.toLowerCase())) &&
@@ -57,7 +58,8 @@ export class PesquisarContatoComponent implements OnInit {
       (!apelido || c.apelido?.toLowerCase().includes(apelido.toLowerCase())) &&
       (!cidade || c.cidade?.toLowerCase().includes(cidade.toLowerCase())) &&
       (!empresa || c.empresa?.toLowerCase().includes(empresa.toLowerCase())) &&
-      (!categoria || c.categoria === categoria)
+      (!categoria || c.categoria === categoria) &&
+      (!site || c.site?.toLowerCase().includes(site.toLowerCase()))
     );
   }
 
