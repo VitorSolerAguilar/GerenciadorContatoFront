@@ -29,7 +29,7 @@ export class EditarContatoComponent {
       empresa: [''],
       site: [''],
       notasAdicionais: [''],
-      Contatofavorito: [false]
+      contatofavorito: [false]
     });
   }
 

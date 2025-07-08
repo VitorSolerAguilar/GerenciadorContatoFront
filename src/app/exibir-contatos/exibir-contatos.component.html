@@ -6,7 +6,7 @@
         <div class="col" *ngFor="let c of contatos">
             <div class="card h-100 border-primary shadow-sm">
                 <div class="card-body">
-                    <h5 class="card-title">{{ c.nomeCompleto }} <span *ngIf="c.Contatofavorito" Class="text-warning">★</span></h5>
+                    <h5 class="card-title">{{ c.nomeCompleto }} <span *ngIf="c.contatofavorito" Class="text-warning">★</span></h5>
                     <p class="card-text mb-1"><strong>Apelido:</strong> {{ c.apelido }}</p>
                     <p class="card-text mb-1"><strong>Telefone:</strong> {{ c.telefone }}</p>
                     <p class="card-text mb-1"><strong>Email:</strong> {{ c.email }}</p>

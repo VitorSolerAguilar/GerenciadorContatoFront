@@ -30,7 +30,7 @@ export class ExibirContatosComponent implements OnInit {
       empresa: [''],
       site: [''],
       notasAdicionais: [''],
-      Contatofavorito: [false]
+      contatofavorito: [false]
     });
   }
 
@@ -76,7 +76,7 @@ export class ExibirContatosComponent implements OnInit {
   }
 
   verDetalhes(contato: Contato) {
-    if (contato.Contatofavorito) {
+    if (contato.contatofavorito) {
       this.router.navigate(['/detalhesFavoritos', contato.id]);
     } else {
       this.router.navigate(['/detalhesContatoComum', contato.id]);

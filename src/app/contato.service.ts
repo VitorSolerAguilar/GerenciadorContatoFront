@@ -33,7 +33,7 @@ export class ContatoService {
   }
 
   getFavoritos(): Observable<Contato[]> {
-    return this.getAll().pipe(map(contatos => contatos.filter(c => c.Contatofavorito))
+    return this.getAll().pipe(map(contatos => contatos.filter(c => c.contatofavorito))
     );
   }
 }

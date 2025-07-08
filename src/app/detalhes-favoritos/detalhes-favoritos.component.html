@@ -3,7 +3,7 @@
 
   <div *ngIf="contato" class="card shadow-sm border-primary">
     <div class="card-body">
-      <h4 class="card-title">{{ contato.nomeCompleto }} <span *ngIf="contato.Contatofavorito" class="text-warning">★</span></h4>
+      <h4 class="card-title">{{ contato.nomeCompleto }} <span *ngIf="contato.contatofavorito" class="text-warning">★</span></h4>
       <p class="card-text"><strong>Apelido:</strong> {{ contato.apelido }}</p>
       <p class="card-text"><strong>Telefone:</strong> {{ contato.telefone }}</p>
       <p class="card-text"><strong>E-mail:</strong> {{ contato.email }}</p>

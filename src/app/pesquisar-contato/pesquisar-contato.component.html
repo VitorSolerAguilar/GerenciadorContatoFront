@@ -78,7 +78,7 @@
     <div class="col" *ngFor="let c of contatosFiltrados">
       <div class="card h-100 border-primary">
         <div class="card-body">
-          <h5 class="card-title">{{ c.nomeCompleto }} ({{ c.apelido }}) <span *ngIf="c.Contatofavorito"
+          <h5 class="card-title">{{ c.nomeCompleto }} ({{ c.apelido }}) <span *ngIf="c.contatofavorito"
               class="text-warning" title="Favorito">★</span></h5>
           <p class="card-text mb-1"><strong>Telefone:</strong> {{ c.telefone }}</p>
           <p class="card-text mb-1"><strong>E-mail:</strong> {{ c.email || '-' }} </p>
