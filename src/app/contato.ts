@@ -11,5 +11,5 @@ export interface Contato{
     empresa: string,
     site: string,
     notasAdicionais: string,
-    Contatofavorito: boolean,
+    contatofavorito: boolean,
 }

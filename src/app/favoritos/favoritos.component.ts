@@ -29,7 +29,7 @@ export class FavoritosComponent implements OnInit {
       empresa: [''],
       site: [''],
       notasAdicionais: [''],
-      Contatofavorito: [false]
+      contatofavorito: [false]
     });
    }
 
@@ -40,7 +40,7 @@ export class FavoritosComponent implements OnInit {
   carregarFavoritos() {
     this.contatoService.getAll().subscribe({
       next: (json) => {
-        this.contatosFavoritos = json.filter(c => c.Contatofavorito === true);
+        this.contatosFavoritos = json.filter(c => c.contatofavorito === true);
       },
       error: (erro) => {
         console.error('Erro ao carregar contatos:', erro);
